@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        #parent{
+            /* list-style-type: none; */
+            display: flex;
+            justify-content: center;
+            background-color: burlywood;
+        }
+       #parent > li{
+            margin-left: 20px;
+            line-height: 50px;
+        }
+        #parent li:hover{
+            background-color: aqua;
+        }
+        #chaild{
+            display: none;
+            position: absolute;
+            background-color: burlywood;
+            padding: 10px;
+
+        }
+        #parent #select-course:hover #chaild{
+            display: block;
+            
+        }
+        #drop {
+          position: absolute;
+          display: none;
+          background-color: blue;
+          left: 30px;
+          top: 0;
+       }
+       #fa:hover #drop{
+           display: block;
+
+       }
+       #fa
+       {position: relative;
+    }
+    #down{
+        position: absolute;
+        display: none;
+        background-color: brown;
+    }
+    #place:hover #down{
+        display: block;
+    }
+    /* #place{
+        position: relative;
+    } */
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="parent">
+            <li>Home</li>
+            <li id="select-course">Course
+                <ul id="chaild">
+                    <li>FSC</li>
+                    <li>ICS</li>
+                    <li id="fa">FA
+                        <ul id="drop">
+                            <li>FA(IT)</li>
+                            <li>FA(edu)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="place">Place
+                <ul id="down">
+                    <li>Lahro</li>
+                    <li>Lahro</li>
+                    <li>Lahro</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </nav>
+</body>
+</html>
